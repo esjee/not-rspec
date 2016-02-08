@@ -1,0 +1,2 @@
+class MtestAssertionError < Exception
+end
