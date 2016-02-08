@@ -1,14 +1,8 @@
 class MtestEqEvaluator
-  def initialize(rhs)
-    @rhs = rhs
-  end
+  include MtestBaseEvaluator
 
-  def evaluate(lhs)
+  def evaluate(lhs, block)
     return if lhs == rhs
-    fail MtestAssertionError, "Equal assertion failed: #{lhs} != #{rhs}"
+    fail MtestAssertionError, "eq assertion failed: #{lhs} != #{rhs}"
   end
-
-  private
-
-  attr_reader :rhs
 end

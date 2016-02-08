@@ -1,10 +1,11 @@
 class MtestExpect
-  def initialize(lhs)
+  def initialize(lhs: nil, block: nil)
     @lhs = lhs
+    @block = block
   end
 
   def to(evaluator)
-    evaluator.evaluate lhs
+    evaluator.evaluate lhs, block
   end
 
   def eq(rhs)
@@ -14,5 +15,5 @@ class MtestExpect
 
   private
 
-  attr_reader :lhs
+  attr_reader :lhs, :block
 end

@@ -1,3 +1,11 @@
 require 'active_support/all'
 
-Dir[File.dirname(__FILE__) + '/core/*.rb'].each { |filename| require filename }
+require_relative "core/mtest_base_evaluator"
+
+require_relative "core/mtest_assertion_error"
+require_relative "core/mtest_describe"
+require_relative "core/mtest_eq_evaluator"
+require_relative "core/mtest_expect"
+require_relative "core/mtest_it"
+require_relative "core/mtest_raise_error_evaluator"
+require_relative "core/mtest"
