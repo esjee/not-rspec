@@ -2,6 +2,8 @@ require 'test/unit'
 require_relative '../../lib/mtest/core'
 
 class TestMtestDescribe < Test::Unit::TestCase
+  include Mtest
+
   def test_that_it_can_pass
     MtestDescribe.new(MtestDescribe) do
       it { }

@@ -1,2 +1,4 @@
-class MtestAssertionError < Exception
+module Mtest
+  class MtestAssertionError < Exception
+  end
 end

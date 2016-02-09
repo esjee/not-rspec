@@ -2,6 +2,8 @@ require 'test/unit'
 require_relative '../../lib/mtest/core'
 
 class TestMtestRaiseErrorEvaluator < Test::Unit::TestCase
+  include Mtest
+
   def test_it_can_pass
     Mtest.describe MtestRaiseErrorEvaluator do
       it "doesn't fail if the expected error is raised" do

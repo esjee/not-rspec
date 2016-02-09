@@ -2,6 +2,8 @@ require 'test/unit'
 require_relative '../../lib/mtest/core'
 
 class TestMtest < Test::Unit::TestCase
+  include Mtest
+
   def test_it_can_pass
     Mtest.describe "Look at me" do
       it { expect(1).to eq 1 }
