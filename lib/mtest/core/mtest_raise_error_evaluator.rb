@@ -17,8 +17,8 @@ module Mtest
     private
 
     def handle_error(raised_error)
+      @has_raised = true
       if raised_error.is_a? expected_error
-        @has_raised = true
       else
         fail MtestAssertionError, "raise_error assertion failed: "\
                                   "expected #{expected_error} got #{raised_error.class}"
